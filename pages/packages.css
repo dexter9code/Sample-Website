@@ -1,0 +1,134 @@
+main {
+    padding-top: 2.3rem;
+}
+
+.background{
+    background: url('../assets/plans.jpg') center/cover;
+    filter: grayscale(30%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.package {
+    width: 80%;
+    margin: 1rem 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color: #ff5454;
+    /* border-color: #ff5454 !important; */
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+}
+
+.package__badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+    background: orangered;
+    padding: 0.6rem;
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1.5rem);
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
+}
+
+.package__subtitle {
+    color: #979797;
+}
+
+#plus:hover  {
+    animation: lifting 1s ease-out forwards;
+}
+
+.package__info {
+    padding: 1rem;
+    border: 1px solid #0e4f1f;
+    font-size: 1.2rem;
+    color: #0e4f1f;
+    background: white;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+    text-align: right;
+}
+
+#free:hover,
+#free:active {
+    border-left-color: #ff5454;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}
+
+@media (min-width:42rem) {
+    main{
+        max-width: 1500px;
+        margin: 3rem auto;
+    }
+}
+
+@media (min-width:1500px) {
+    
+    .package {
+        border-left: 4px solid #0e4f1f;
+    }
+    
+    #free {
+        border-right: 4px solid #0e4f1f;
+    }
+    
+    #free:hover,
+    #free:active {
+    border-color: #ff5454;
+    }
+}
+
+
+@keyframes lifting{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
